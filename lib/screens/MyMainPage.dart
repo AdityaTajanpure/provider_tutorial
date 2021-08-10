@@ -9,8 +9,17 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child:
-              Text("Your counter value is: ${context.watch<Counter>().count}")),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Your counter value is: ${context.watch<Counter>().count}"),
+            ElevatedButton(
+              onPressed: () => {Navigator.pushNamed(context, '/second')},
+              child: Text("Launch Screen"),
+            ),
+          ],
+        ),
+      ),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
