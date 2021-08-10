@@ -7,19 +7,19 @@ import 'package:provider_tutorial/screens/SecondScreen.dart';
 
 void main() {
   runApp(
-    MultiProvider(providers: [
-      ChangeNotifierProvider(
-        create: (context) => ShoppingCart(),
-      ),
-      ChangeNotifierProvider(
-        create: (context) => Counter(),
-      ),
-    ], child: MyApp()),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => Counter()),
+        ChangeNotifierProvider(create: (_) => ShoppingCart()),
+      ],
+      child: MyApp(),
+    ),
   );
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  MyApp({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,9 +28,6 @@ class MyApp extends StatelessWidget {
         '/': (context) => MyHomePage(),
         '/second': (context) => SecondScreen(),
       },
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
     );
   }
 }
