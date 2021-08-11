@@ -1,6 +1,7 @@
-# provider_tutorial
+# Flutter Provider Demo
 
-A new Flutter project.
+A Flutter Project to try provider package and get familiar with it's usage.
+Package Used: provider
 
 ## Getting Started
 
