@@ -2,6 +2,7 @@
 
 A Flutter Project to try provider package and get familiar with it's usage.
 Package Used: provider
+Getting used with flutter provider package.
 
 ## Getting Started
 
